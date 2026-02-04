@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Playground Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mini Playground</h1>
+            <div class="controls">
+                <button id="export-btn">Export</button>
+                <button id="theme-toggle">Toggle Theme</button>
+            </div>
+        </header>
+        <nav class="tabs">
+            <button class="tab-button active" data-editor="html">HTML</button>
+            <button class="tab-button" data-editor="css">CSS</button>
+            <button class="tab-button" data-editor="js">JS</button>
+            <button class="tab-button" data-editor="preview">Preview</button>
+        </nav>
+        <div class="editor-container">
+            <div class="editor-panel html-panel active">
+                <h2>HTML</h2>
+                <div class="editor" id="html-editor" contenteditable="true"></div>
+            </div>
+            <div class="editor-panel css-panel">
+                <h2>CSS</h2>
+                <div class="editor" id="css-editor" contenteditable="true"></div>
+            </div>
+            <div class="editor-panel js-panel">
+                <h2>JavaScript</h2>
+                <div class="editor" id="js-editor" contenteditable="true"></div>
+            </div>
+            <div class="preview-panel">
+                <iframe id="preview-frame"></iframe>
+                <div class="preview-controls">
+                    <button id="view-btn">View</button>
+                    <label><input type="checkbox" id="auto-view-toggle"> Auto-View</label>
+                </div>
+            </div>
+        </div>
+        <div class="console-panel">
+            <h2>Console Output</h2>
+            <div id="console-output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
